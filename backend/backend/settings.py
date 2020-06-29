@@ -46,7 +46,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
+    #"django.middleware.csrf.CsrfViewMiddleware", #comment out if needed
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -116,5 +116,26 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        "rest_framwork.permissions.AllowAny"
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication"
+    ]
+}
+
 CORS_ORIGIN_ALLOW_ALL = True
 
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = (
+        'http://localhost:3000',
+)
+#CORS_ALLOW_HEADERS = (
+#    'csrftoken',
+#    'content-type',
+#    'X-CSRFTOKEN'
+#)
+#CSRF_COOKIE_NAME = "csrftoken"
+#CSRF_HEADER_NAME = 'X-CSRFTOKEN'
+#CSRF_COOKIE_SECURE = True
