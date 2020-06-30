@@ -39,15 +39,21 @@ div form input {
 }
 
 .add-btn {
+  font-size: 16px;
   padding: 5px;
   border-radius: 20px;
+  background-color: #3498db;
+  color: white;
 }
 
 .cancel-btn {
   position: relative;
+  font-size: 14px;
   top: -6vh;
   padding: 5px;
   border-radius: 20px;
+  background-color: red;
+  color: white;
 }
 
 .user-list {
@@ -60,4 +66,12 @@ div form input {
 .user-list li {
   margin-top: 5px;
   margin-bottom: 5px;
+  transition: 0.3s;
+}
+
+.user-list li:hover {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  transform: scale(1.2);
 }
