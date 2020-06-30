@@ -2,16 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -24,15 +15,63 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+div form {
+  background-color: black;
+  padding: 10px 50px 50px 50px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-title {
+  text-decoration: underline;
+}
+
+div form label{
+  display: inline-block;
+  float: left;
+  width: 100px;
+  text-align: center;
+}
+div form input {
+  margin: 2px 2px;
+  display: inline-block;
+  float: left;
+  width: 30vw;
+}
+
+.add-btn {
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #3498db;
+  color: white;
+}
+
+.cancel-btn {
+  position: relative;
+  font-size: 14px;
+  top: -6vh;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: red;
+  color: white;
+}
+
+.user-list {
+  background-color: black;
+  padding: 10px;
+  list-style: none;
+  border-radius: 10px;
+}
+
+.user-list li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: 0.3s;
+}
+
+.user-list li:hover {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  transform: scale(1.2);
 }
