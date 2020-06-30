@@ -17,8 +17,12 @@
 
 div form {
   background-color: black;
-  padding: 50px;
+  padding: 10px 50px 50px 50px;
   border-radius: 10px;
+}
+
+.form-title {
+  text-decoration: underline;
 }
 
 div form label{

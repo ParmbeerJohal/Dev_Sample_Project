@@ -82,6 +82,7 @@ function App() {
     return (
       <div>
         <form onSubmit={handleSubmit} action={url+"/users/add/"} method="POST">
+          <h1 class="form-title">Add a User!</h1>
           <label for="name">Name *:</label>
           <input type="text"
           placeholder="Add Full Name"
@@ -117,7 +118,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <AddPersonForm />
-        <h2>Users:</h2>
+        <h2>Current Users:</h2>
         {isFetching ? (
           <p>Loading...</p>
         ) : (
