@@ -49,3 +49,15 @@ div form input {
   padding: 5px;
   border-radius: 20px;
 }
+
+.user-list {
+  background-color: black;
+  padding: 10px;
+  list-style: none;
+  border-radius: 10px;
+}
+
+.user-list li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

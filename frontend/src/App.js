@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 //import logo from "./logo.svg";
 import "./App.css";
+import styled, { keyframes } from "styled-components";
+import { bounce, fadeInUp} from "react-animations";
 
 const url = "http://localhost:8000";
+
+//const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`} infinite`;
+const Fade = styled.div`animation: 3s ${keyframes`${fadeInUp}`} `;
 
 function App() {
   const [users, setUsers] = useState();
@@ -122,9 +127,9 @@ function App() {
         {isFetching ? (
           <p>Loading...</p>
         ) : (
-          <ul>
+          <ul class="user-list">
             {users?.map((user, index) => (
-              <li key={index}>{user.fields.name}</li>
+              <Fade><li key={index}>{user.fields.name}</li></Fade>
             ))}
           </ul>
         )}
@@ -132,5 +137,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
